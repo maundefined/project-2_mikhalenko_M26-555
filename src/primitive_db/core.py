@@ -33,7 +33,8 @@ def create_table(metadata, table_name, columns):
     id_col = {"name": "ID", "type": "int"}
 
     if any(col['name'] == 'ID' for col in parsed_cols):
-        print('Ошибка: Столбец "ID" добавляется автоматически, не указывайте его вручную.')
+        print('Ошибка: Столбец "ID" добавляется автоматически, '
+              'не указывайте его вручную.')
         return metadata
 
     all_cols = [id_col] + parsed_cols
